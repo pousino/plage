@@ -19,9 +19,13 @@ public interface PaysDao  {
     Optional<Pays> findById(String code);
     
     Pays findByNom(String nom);
+    
     Pays save(Pays theme);
+    
     List<Pays> findAll();
+    
     long count();
+    
     List<Pays> saveAll(List<Pays> lesPays);
     
     

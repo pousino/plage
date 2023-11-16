@@ -58,16 +58,15 @@ public class PaysDaoImpl implements PaysDao {
     @Override
     public Pays findByNom(String nom) {
         Session session = entityManager.unwrap(Session.class);
-        
-        List<Pays> listPays = session.createQuery("from Pays where nom = :nom", Pays.class).setParameter("nom", nom).list();
-        return listPays.isEmpty() ? null : listPays.get(0);
+        //TODO faire la requete
+        return null;
     }
     
     
     @Override
     public Pays save(Pays pays) {
         Session session = entityManager.unwrap(Session.class);
-        session.save(pays);   //commit    //flush à chaque fois
+        //TODO faire la requete
         return pays;
     }
     
@@ -89,10 +88,8 @@ public class PaysDaoImpl implements PaysDao {
     @Override
     public List<Pays> saveAll(List<Pays> paysList) {
         Session session = entityManager.unwrap(Session.class);
-        paysList.forEach(pays -> {
-                session.save(pays);
-                System.out.println("Nombre de Pays ajoutés " + count()); //flush à chaque fois
-        });
+        //TODO faire la requete
+        
         return paysList;
     }
     
