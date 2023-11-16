@@ -29,6 +29,7 @@ public interface ClientDao extends JpaRepository<Client, Long> {
     
     //5. écrire la requete qui liste les clients dont le pays est l'espagne
     //TODO faire la requete
+    List<Client> findSpanishClients();
     
     //6. écrire la requete qui liste les clients dont le pays est filtré
     // via une variable passée en paramètre via l'annotation @Param

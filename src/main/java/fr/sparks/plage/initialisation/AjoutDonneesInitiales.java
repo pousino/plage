@@ -73,8 +73,8 @@ public class AjoutDonneesInitiales implements CommandLineRunner { //CommandLineR
         //clientDao.findClientsByPaysCodeNamed("ES").forEach(client -> System.out.println(client));
         
         //DATE INSCRIPTION
-        clientDao.findClientsInscritsApres(LocalDateTime.of(2023, 6, 1, 0, 0))
-                .forEach(client -> System.out.println(client));
+        //clientDao.findClientsInscritsApres(LocalDateTime.of(2023, 6, 1, 0, 0))
+          //      .forEach(client -> System.out.println(client));
         
         //Clients portugais dont le nom de naissance commence par A
         //clientDao.findClientsPortugaisDontNomNaissanceCommenceParA()
@@ -99,25 +99,25 @@ public class AjoutDonneesInitiales implements CommandLineRunner { //CommandLineR
         
         //paysDao.findNombreClientsParMoisEtParAnnee().forEach(clientCountByMonth -> System.out.println(clientCountByMonth.getMois() + "/" + clientCountByMonth.getAnnee() + " : " + clientCountByMonth.getNombre()));
         
-        System.out.println("prix moyen " + parasolDao.findPrixMoyenParasol());
-        System.out.println("nombre de parasols " + parasolDao.findNombreParasols());
+        //System.out.println("prix moyen " + parasolDao.findPrixMoyenParasol());
+        //System.out.println("nombre de parasols " + parasolDao.findNombreParasols());
         
-        LocalDateTime premier = LocalDateTime.now().with(DayOfWeek.MONDAY);
+        //LocalDateTime premier = LocalDateTime.now().with(DayOfWeek.MONDAY);
         
         //clientDao.findNombreClientsInscritsCetteSemaine3().forEach(client-> System.out.println(client));
         
-        System.out.println("recherche pays par code " + paysDao.findByCode("FR"));
-        System.out.println("recherche pays par code " + paysDao.findById("AA").isPresent());
+        //System.out.println("recherche pays par code " + paysDao.findByCode("FR"));
+        //System.out.println("recherche pays par code " + paysDao.findById("AA").isPresent());
         
-        System.out.println("recherche pays par nom " + paysDao.findByNom("Japon"));
-        System.out.println("recherche pays par nom " + paysDao.findByNom("France"));
+        //System.out.println("recherche pays par nom " + paysDao.findByNom("Japon"));
+        //System.out.println("recherche pays par nom " + paysDao.findByNom("France"));
         
         
         //paysDao.save(Pays.builder().code("AR").nom("Argentine").build());
         //paysDao.saveAll(Arrays.asList(Pays.builder().code("BR").nom("Brésil").build(), Pays.builder().code("CA").nom("Canada").build()));
-        System.out.println("nombre de pays " + paysDao.count());
+        //System.out.println("nombre de pays " + paysDao.count());
         
-        System.out.println("Afficher tous les pays " + paysDao.findAll());
+        //System.out.println("Afficher tous les pays " + paysDao.findAll());
         
         //paysDao.delete(paysDao.findById("IT").get());
     }
